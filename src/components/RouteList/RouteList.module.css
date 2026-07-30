@@ -1,0 +1,43 @@
+.section {
+  display: grid;
+  width: min(100%, 1040px);
+  gap: 14px;
+}
+
+.title {
+  margin: 0;
+  color: #18212f;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.count {
+  margin: -8px 0 3px;
+  color: #667085;
+  font-size: 0.825rem;
+}
+
+.list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.empty {
+  margin: 0;
+  padding: 24px 16px;
+  border: 1px dashed #c2c8d0;
+  border-radius: 14px;
+  color: #667085;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .section {
+    gap: 16px;
+  }
+}
