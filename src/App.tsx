@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 import RouteList from "./components/RouteList/RouteList";
 import transportJson from "./data/transport.json";
@@ -56,6 +57,7 @@ function App() {
         routes={filteredRoutes}
         cityName={currentCity?.name ?? "Неизвестный город"}
       ></RouteList>
+      <Analytics />
     </main>
   );
 }
