@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { useState } from "react";
 import "./App.css";
 import RouteList from "./components/RouteList/RouteList";
 import transportJson from "./data/transport.json";
@@ -31,6 +31,20 @@ function App() {
         <h1>Маршрутки ПМР</h1>
         <p>{currentCity?.name ?? "Неизвестный город"}</p>
       </header>
+
+      <aside className="prototype-notice">
+        <p>
+          ⚠️ Это прототип. Данные могут быть неполными или неточными. Сейчас
+          проверяю источники и постепенно уточняю данные.
+        </p>
+        <a
+          href="https://t.me/fizaliondev/118"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Нашли неточность? Сообщить в Telegram
+        </a>
+      </aside>
 
       <label className="search-label" htmlFor="search-input">
         Поиск маршрута
