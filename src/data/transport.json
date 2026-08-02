@@ -135,9 +135,7 @@
           "улица Одесская"
         ]
       },
-      "features": [
-        "Схема движения изменена с 1 мая 2026 года"
-      ],
+      "features": ["Схема движения изменена с 1 мая 2026 года"],
       "dataStatus": {
         "price": "confirmed",
         "route": "official",
@@ -200,9 +198,7 @@
           "улица Чайковского"
         ]
       },
-      "features": [
-        "Продлён до улицы Чайковского с 4 мая 2026 года"
-      ],
+      "features": ["Продлён до улицы Чайковского с 4 мая 2026 года"],
       "dataStatus": {
         "price": "confirmed",
         "route": "official",
@@ -228,7 +224,7 @@
         "days": "daily",
         "daysLabel": "Ежедневно",
         "firstDeparture": "06:00",
-        "lastDeparture": "22:30",
+        "lastDeparture": "19:00",
         "intervalMinutes": {
           "min": 8,
           "max": 40
