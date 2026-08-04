@@ -1,7 +1,9 @@
 import { Analytics } from "@vercel/analytics/react";
 import { useState } from "react";
 import "./App.css";
+import OfficialRouteCard from "./components/OfficialRouteCard/OfficialRouteCard";
 import RouteList from "./components/RouteList/RouteList";
+import route075Data from "./data/route-075.json";
 import transportJson from "./data/transport.json";
 import type { TransportData } from "./types/transport";
 
@@ -46,31 +48,47 @@ function App() {
         </a>
       </aside>
 
-      <label className="search-label" htmlFor="search-input">
-        Поиск маршрута
-      </label>
-      <input
-        id="search-input"
-        className="search-input"
-        onChange={(event) => setSearchQuery(event.target.value)}
-        placeholder="Номер маршрута или направление"
-        value={searchQuery}
-      />
+      <section className="route-section verified-routes-section">
+        <h2 className="route-section-title">Проверенный маршрут</h2>
+        <p className="route-section-description">
+          Расписание и остановки проверены по официальным источникам.
+        </p>
+        <OfficialRouteCard route={route075Data} />
+      </section>
 
-      {searchQuery && (
-        <button
-          className="clear-search-button"
-          type="button"
-          onClick={handleClearSearch}
-        >
-          Очистить поиск
-        </button>
-      )}
+      <section className="route-section demo-routes-section">
+        <h2 className="route-section-title">Демо-маршруты</h2>
+        <p className="route-section-description">
+          Данные этих маршрутов ещё проверяются.
+        </p>
 
-      <RouteList
-        routes={filteredRoutes}
-        cityName={currentCity?.name ?? "Неизвестный город"}
-      ></RouteList>
+        <label className="search-label" htmlFor="search-input">
+          Поиск маршрута
+        </label>
+        <input
+          id="search-input"
+          className="search-input"
+          onChange={(event) => setSearchQuery(event.target.value)}
+          placeholder="Номер маршрута или направление"
+          value={searchQuery}
+        />
+
+        {searchQuery && (
+          <button
+            className="clear-search-button"
+            type="button"
+            onClick={handleClearSearch}
+          >
+            Очистить поиск
+          </button>
+        )}
+
+        <RouteList
+          routes={filteredRoutes}
+          cityName={currentCity?.name ?? "Неизвестный город"}
+        ></RouteList>
+      </section>
+
       <Analytics />
     </main>
   );

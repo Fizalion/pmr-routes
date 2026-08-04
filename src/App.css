@@ -73,8 +73,39 @@
   outline-offset: 2px;
 }
 
-.search-label {
+.route-section {
   width: min(100%, 1040px);
+  min-width: 0;
+}
+
+.verified-routes-section {
+  margin-bottom: 38px;
+}
+
+.demo-routes-section {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  padding-top: 28px;
+  border-top: 1px solid #dfe4e8;
+}
+
+.route-section-title {
+  margin: 0;
+  color: #18212f;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  line-height: 1.3;
+}
+
+.route-section-description {
+  margin: 6px 0 17px;
+  color: #667085;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.search-label {
+  width: 100%;
   margin-bottom: 7px;
   color: #344054;
   font-size: 0.85rem;
@@ -82,7 +113,7 @@
 }
 
 .search-input {
-  width: min(100%, 1040px);
+  width: 100%;
   height: 50px;
   margin-bottom: 24px;
   padding: 0 15px;
