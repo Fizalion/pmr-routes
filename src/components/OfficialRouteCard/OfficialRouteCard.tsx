@@ -1,9 +1,11 @@
 import { useState } from "react";
 import route075Data from "../../data/route-075.json";
+import route076Data from "../../data/route-076.json";
 import styles from "./OfficialRouteCard.module.css";
 
 type OfficialRouteCardProps = {
-  route: typeof route075Data;
+  route: typeof route075Data | typeof route076Data;
+  showStops?: boolean;
 };
 
 const getDepartureMinutes = (departure: string) => {
@@ -17,18 +19,22 @@ const getUpcomingDepartures = (
   currentTimeMinutes: number,
 ) =>
   departures
-    .filter(
-      (departure) => getDepartureMinutes(departure) >= currentTimeMinutes,
-    )
+    .filter((departure) => getDepartureMinutes(departure) >= currentTimeMinutes)
     .slice(0, 5);
 
-const OfficialRouteCard = ({ route }: OfficialRouteCardProps) => {
+const OfficialRouteCard = ({
+  route,
+  showStops = true,
+}: OfficialRouteCardProps) => {
   const [isForwardScheduleExpanded, setIsForwardScheduleExpanded] =
     useState(false);
   const [isBackwardScheduleExpanded, setIsBackwardScheduleExpanded] =
     useState(false);
+
   const forwardDepartures = route.schedule.forwardDepartures;
   const backwardDepartures = route.schedule.backwardDepartures;
+  const forwardScheduleId = route.id + "-forward-schedule";
+  const backwardScheduleId = route.id + "-backward-schedule";
   const stops = route.stops;
   const source = route.source.schedule.name;
   const currentTime = new Date();
@@ -67,13 +73,15 @@ const OfficialRouteCard = ({ route }: OfficialRouteCardProps) => {
         <h2 className={styles.sectionTitle}>Расписание</h2>
         <div className={styles.scheduleGrid}>
           <div className={styles.scheduleDirection}>
-            <h3 className={styles.directionTitle}>Тирасполь → Днестровск</h3>
+            <h3 className={styles.directionTitle}>
+              {route.directions.forward.from} → {route.directions.forward.to}
+            </h3>
             <p className={styles.nextDeparturesLabel}>
               {isForwardScheduleExpanded
                 ? "Полное расписание"
                 : "Следующие рейсы"}
             </p>
-            <div id="forward-schedule">
+            <div id={forwardScheduleId}>
               {displayedForwardDepartures.length > 0 ? (
                 <ul className={styles.departureList}>
                   {displayedForwardDepartures.map((departure, index) => (
@@ -94,7 +102,7 @@ const OfficialRouteCard = ({ route }: OfficialRouteCardProps) => {
             <button
               className={styles.scheduleButton}
               type="button"
-              aria-controls="forward-schedule"
+              aria-controls={forwardScheduleId}
               aria-expanded={isForwardScheduleExpanded}
               onClick={() =>
                 setIsForwardScheduleExpanded((isExpanded) => !isExpanded)
@@ -107,13 +115,15 @@ const OfficialRouteCard = ({ route }: OfficialRouteCardProps) => {
           </div>
 
           <div className={styles.scheduleDirection}>
-            <h3 className={styles.directionTitle}>Днестровск → Тирасполь</h3>
+            <h3 className={styles.directionTitle}>
+              {route.directions.backward.from} → {route.directions.backward.to}
+            </h3>
             <p className={styles.nextDeparturesLabel}>
               {isBackwardScheduleExpanded
                 ? "Полное расписание"
                 : "Следующие рейсы"}
             </p>
-            <div id="backward-schedule">
+            <div id={backwardScheduleId}>
               {displayedBackwardDepartures.length > 0 ? (
                 <ul className={styles.departureList}>
                   {displayedBackwardDepartures.map((departure, index) => (
@@ -134,7 +144,7 @@ const OfficialRouteCard = ({ route }: OfficialRouteCardProps) => {
             <button
               className={styles.scheduleButton}
               type="button"
-              aria-controls="backward-schedule"
+              aria-controls={backwardScheduleId}
               aria-expanded={isBackwardScheduleExpanded}
               onClick={() =>
                 setIsBackwardScheduleExpanded((isExpanded) => !isExpanded)
@@ -148,16 +158,21 @@ const OfficialRouteCard = ({ route }: OfficialRouteCardProps) => {
         </div>
       </section>
 
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Остановки</h2>
-        <ul className={styles.stopList}>
-          {stops.map((stop) => (
-            <li className={styles.stopItem} key={stop.id}>
-              {stop.name} - {stop.settlement}
-            </li>
-          ))}
-        </ul>
-      </section>
+      {showStops && (
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Остановки</h2>
+          <ul className={styles.stopList}>
+            {stops.map((stop) => (
+              <li className={styles.stopItem} key={stop.id}>
+                {stop.name}
+                {"settlement" in stop &&
+                  stop.settlement &&
+                  ` - ${stop.settlement}`}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <footer className={styles.footer}>
         <p>

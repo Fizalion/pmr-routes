@@ -3,6 +3,16 @@
   "officialNumber": "075",
   "name": "Тирасполь — Днестровск",
   "category": "пригородный",
+  "directions": {
+    "forward": {
+      "from": "Тирасполь",
+      "to": "Днестровск"
+    },
+    "backward": {
+      "from": "Днестровск",
+      "to": "Тирасполь"
+    }
+  },
   "source": {
     "structure": {
       "name": "Приказ МЭР №462",

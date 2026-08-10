@@ -4,6 +4,7 @@ import "./App.css";
 import OfficialRouteCard from "./components/OfficialRouteCard/OfficialRouteCard";
 import RouteList from "./components/RouteList/RouteList";
 import route075Data from "./data/route-075.json";
+import route076Data from "./data/route-076.json";
 import transportJson from "./data/transport.json";
 import type { TransportData } from "./types/transport";
 
@@ -49,11 +50,12 @@ function App() {
       </aside>
 
       <section className="route-section verified-routes-section">
-        <h2 className="route-section-title">Проверенный маршрут</h2>
+        <h2 className="route-section-title">Проверенные маршруты</h2>
         <p className="route-section-description">
           Расписание и остановки проверены по официальным источникам.
         </p>
         <OfficialRouteCard route={route075Data} />
+        <OfficialRouteCard route={route076Data} />
       </section>
 
       <section className="route-section demo-routes-section">

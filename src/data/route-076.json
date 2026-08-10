@@ -1,0 +1,209 @@
+{
+  "id": "route-076-tiraspol-dubossary",
+  "officialNumber": "076",
+  "name": "Тирасполь — Дубоссары",
+  "category": "регулярный междугородный маршрут",
+  "directions": {
+    "forward": {
+      "from": "Тирасполь",
+      "to": "Дубоссары"
+    },
+    "backward": {
+      "from": "Дубоссары",
+      "to": "Тирасполь"
+    }
+  },
+  "variants": [
+    {
+      "officialNumber": "076 (А)",
+      "description": "Продление маршрута до ДКП г. Дубоссары",
+      "distance": 64.4
+    }
+  ],
+  "source": {
+    "structure": {
+      "name": "Приказ МЭР №462",
+      "date": "2020-06-24"
+    },
+    "schedule": {
+      "name": "ОАО «Автостанции Приднестровья»",
+      "channel": "официальная Viber-группа",
+      "checkedAt": "2026-08-10"
+    }
+  },
+  "schedule": {
+    "forwardPublishedAt": "2026-08-05",
+    "backwardPublishedAt": "2026-08-10",
+    "forwardServiceDays": "ежедневно",
+    "forwardDepartures": [
+      "05:55",
+      "06:20",
+      "06:45",
+      "07:15",
+      "07:45",
+      "08:10",
+      "09:00",
+      "09:30",
+      "09:55",
+      "10:20",
+      "11:00",
+      "11:25",
+      "12:00",
+      "12:25",
+      "13:00",
+      "13:30",
+      "14:00",
+      "14:50",
+      "15:15",
+      "15:40",
+      "15:50",
+      "17:10",
+      "17:15"
+    ],
+    "backwardDepartures": [
+      "09:30",
+      "10:00",
+      "10:20",
+      "10:50",
+      "11:15",
+      "11:30",
+      "12:25",
+      "13:00",
+      "13:30",
+      "13:55",
+      "14:45",
+      "15:00",
+      "16:00",
+      "16:30",
+      "17:10",
+      "17:45",
+      "18:40",
+      "19:30"
+    ]
+  },
+  "distance": 62.7,
+  "stops": [
+    {
+      "id": "tiraspol-as",
+      "displayOrder": 1,
+      "name": "АС Тирасполь",
+      "address": "ул. Ленина, 59б",
+      "settlement": "г. Тирасполь",
+      "distanceFromStart": 0.0,
+      "distanceBetweenPrevious": 0.0,
+      "distanceToEnd": 62.7
+    },
+    {
+      "id": "malaeshty",
+      "displayOrder": 2,
+      "name": "Малаешты",
+      "address": "",
+      "settlement": "с. Малаешты",
+      "distanceFromStart": 17.6,
+      "distanceBetweenPrevious": 17.6,
+      "distanceToEnd": 45.1
+    },
+    {
+      "id": "butory",
+      "displayOrder": 3,
+      "name": "Буторы",
+      "address": "ул. Ленина, 1",
+      "settlement": "с. Буторы",
+      "distanceFromStart": 30.9,
+      "distanceBetweenPrevious": 13.3,
+      "distanceToEnd": 31.8
+    },
+    {
+      "id": "tashlyk",
+      "displayOrder": 4,
+      "name": "Ташлык",
+      "address": "ул. Мира, 65",
+      "settlement": "с. Ташлык",
+      "distanceFromStart": 32.7,
+      "distanceBetweenPrevious": 1.8,
+      "distanceToEnd": 30.0
+    },
+    {
+      "id": "krasnaya-gorka",
+      "displayOrder": 5,
+      "name": "Красная Горка",
+      "address": "ул. Тираспольская",
+      "settlement": "с. Красная Горка",
+      "distanceFromStart": 43.3,
+      "distanceBetweenPrevious": 10.6,
+      "distanceToEnd": 19.4
+    },
+    {
+      "id": "delakeu",
+      "displayOrder": 6,
+      "name": "Делакеу",
+      "address": "ул. Мичурина, 11",
+      "settlement": "с. Делакеу",
+      "distanceFromStart": 44.3,
+      "distanceBetweenPrevious": 1.0,
+      "distanceToEnd": 18.4
+    },
+    {
+      "id": "grigoriopol-dkp",
+      "displayOrder": 7,
+      "name": "ДКП Григориополь",
+      "address": "ул. Карла Маркса",
+      "settlement": "г. Григориополь",
+      "distanceFromStart": 44.7,
+      "distanceBetweenPrevious": 0.4,
+      "distanceToEnd": 18.0
+    },
+    {
+      "id": "grigoriopol-as",
+      "displayOrder": 8,
+      "name": "АС Григориополь",
+      "address": "ул. Кирова, 2",
+      "settlement": "г. Григориополь",
+      "distanceFromStart": 45.5,
+      "distanceBetweenPrevious": 0.8,
+      "distanceToEnd": 17.2
+    },
+    {
+      "id": "dorotskoe",
+      "displayOrder": 9,
+      "name": "Дороцкое",
+      "address": "",
+      "settlement": "с. Дороцкое",
+      "distanceFromStart": 52.5,
+      "distanceBetweenPrevious": 7.0,
+      "distanceToEnd": 10.2
+    },
+    {
+      "id": "koshnitsa",
+      "displayOrder": 10,
+      "name": "Кошница",
+      "address": "",
+      "settlement": "с. Кошница",
+      "distanceFromStart": 54.4,
+      "distanceBetweenPrevious": 1.9,
+      "distanceToEnd": 8.3
+    },
+    {
+      "id": "dubossary-as",
+      "displayOrder": 11,
+      "name": "АС Дубоссары",
+      "address": "ул. Свердлова, 68",
+      "settlement": "г. Дубоссары",
+      "distanceFromStart": 62.7,
+      "distanceBetweenPrevious": 8.3,
+      "distanceToEnd": 0.0
+    }
+  ],
+  "variantStops": [
+    {
+      "id": "dubossary-dkp",
+      "displayOrder": 12,
+      "name": "ДКП Дубоссары",
+      "address": "ул. Ленина, 80б",
+      "settlement": "г. Дубоссары",
+      "distanceFromStart": 64.4,
+      "distanceBetweenPrevious": 1.7,
+      "distanceToEnd": 0.0
+    }
+  ]
+}
