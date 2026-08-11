@@ -1,59 +1,20 @@
-import { useState } from "react";
-import route075Data from "../../data/route-075.json";
-import route076Data from "../../data/route-076.json";
+import type { OfficialRoute } from "../../types/officialRoute";
 import styles from "./OfficialRouteCard.module.css";
+import ScheduleDirection from "./ScheduleDirection";
 
 type OfficialRouteCardProps = {
-  route: typeof route075Data | typeof route076Data;
+  route: OfficialRoute;
   showStops?: boolean;
 };
-
-const getDepartureMinutes = (departure: string) => {
-  const [hours, minutes] = departure.split(":").map(Number);
-
-  return hours * 60 + minutes;
-};
-
-const getUpcomingDepartures = (
-  departures: string[],
-  currentTimeMinutes: number,
-) =>
-  departures
-    .filter((departure) => getDepartureMinutes(departure) >= currentTimeMinutes)
-    .slice(0, 5);
 
 const OfficialRouteCard = ({
   route,
   showStops = true,
 }: OfficialRouteCardProps) => {
-  const [isForwardScheduleExpanded, setIsForwardScheduleExpanded] =
-    useState(false);
-  const [isBackwardScheduleExpanded, setIsBackwardScheduleExpanded] =
-    useState(false);
-
-  const forwardDepartures = route.schedule.forwardDepartures;
-  const backwardDepartures = route.schedule.backwardDepartures;
   const forwardScheduleId = route.id + "-forward-schedule";
   const backwardScheduleId = route.id + "-backward-schedule";
   const stops = route.stops;
   const source = route.source.schedule.name;
-  const currentTime = new Date();
-  const currentTimeMinutes =
-    currentTime.getHours() * 60 + currentTime.getMinutes();
-  const upcomingForwardDepartures = getUpcomingDepartures(
-    forwardDepartures,
-    currentTimeMinutes,
-  );
-  const upcomingBackwardDepartures = getUpcomingDepartures(
-    backwardDepartures,
-    currentTimeMinutes,
-  );
-  const displayedForwardDepartures = isForwardScheduleExpanded
-    ? forwardDepartures
-    : upcomingForwardDepartures;
-  const displayedBackwardDepartures = isBackwardScheduleExpanded
-    ? backwardDepartures
-    : upcomingBackwardDepartures;
   const splitDate = route.source.schedule.checkedAt.split("-");
   const checkedAtLabel = new Date(
     Number(splitDate[0]),
@@ -72,89 +33,19 @@ const OfficialRouteCard = ({
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Расписание</h2>
         <div className={styles.scheduleGrid}>
-          <div className={styles.scheduleDirection}>
-            <h3 className={styles.directionTitle}>
-              {route.directions.forward.from} → {route.directions.forward.to}
-            </h3>
-            <p className={styles.nextDeparturesLabel}>
-              {isForwardScheduleExpanded
-                ? "Полное расписание"
-                : "Следующие рейсы"}
-            </p>
-            <div id={forwardScheduleId}>
-              {displayedForwardDepartures.length > 0 ? (
-                <ul className={styles.departureList}>
-                  {displayedForwardDepartures.map((departure, index) => (
-                    <li
-                      className={styles.departureTime}
-                      key={"forward-" + departure + index}
-                    >
-                      {departure}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className={styles.noDepartures}>
-                  Следующий рейс завтра в {forwardDepartures[0]}.
-                </p>
-              )}
-            </div>
-            <button
-              className={styles.scheduleButton}
-              type="button"
-              aria-controls={forwardScheduleId}
-              aria-expanded={isForwardScheduleExpanded}
-              onClick={() =>
-                setIsForwardScheduleExpanded((isExpanded) => !isExpanded)
-              }
-            >
-              {isForwardScheduleExpanded
-                ? "Скрыть полное расписание"
-                : "Показать всё расписание"}
-            </button>
-          </div>
+          <ScheduleDirection
+            from={route.directions.forward.from}
+            to={route.directions.forward.to}
+            departures={route.schedule.forwardDepartures}
+            scheduleId={forwardScheduleId}
+          />
 
-          <div className={styles.scheduleDirection}>
-            <h3 className={styles.directionTitle}>
-              {route.directions.backward.from} → {route.directions.backward.to}
-            </h3>
-            <p className={styles.nextDeparturesLabel}>
-              {isBackwardScheduleExpanded
-                ? "Полное расписание"
-                : "Следующие рейсы"}
-            </p>
-            <div id={backwardScheduleId}>
-              {displayedBackwardDepartures.length > 0 ? (
-                <ul className={styles.departureList}>
-                  {displayedBackwardDepartures.map((departure, index) => (
-                    <li
-                      className={styles.departureTime}
-                      key={"backward-" + departure + index}
-                    >
-                      {departure}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className={styles.noDepartures}>
-                  Следующий рейс завтра в {backwardDepartures[0]}.
-                </p>
-              )}
-            </div>
-            <button
-              className={styles.scheduleButton}
-              type="button"
-              aria-controls={backwardScheduleId}
-              aria-expanded={isBackwardScheduleExpanded}
-              onClick={() =>
-                setIsBackwardScheduleExpanded((isExpanded) => !isExpanded)
-              }
-            >
-              {isBackwardScheduleExpanded
-                ? "Скрыть полное расписание"
-                : "Показать всё расписание"}
-            </button>
-          </div>
+          <ScheduleDirection
+            from={route.directions.backward.from}
+            to={route.directions.backward.to}
+            departures={route.schedule.backwardDepartures}
+            scheduleId={backwardScheduleId}
+          />
         </div>
       </section>
 
@@ -165,9 +56,7 @@ const OfficialRouteCard = ({
             {stops.map((stop) => (
               <li className={styles.stopItem} key={stop.id}>
                 {stop.name}
-                {"settlement" in stop &&
-                  stop.settlement &&
-                  ` - ${stop.settlement}`}
+                {stop.settlement && ` - ${stop.settlement}`}
               </li>
             ))}
           </ul>

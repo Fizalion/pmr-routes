@@ -8,6 +8,8 @@ import route076Data from "./data/route-076.json";
 import transportJson from "./data/transport.json";
 import type { TransportData } from "./types/transport";
 
+const officialRoutes = [route075Data, route076Data];
+
 const transportData: TransportData = transportJson as TransportData;
 const currentCity = transportData.cities[0];
 const tiraspolRoutes = transportData.routes.filter(
@@ -32,7 +34,6 @@ function App() {
     <main className="app">
       <header className="app-header">
         <h1>Маршрутки ПМР</h1>
-        <p>{currentCity?.name ?? "Неизвестный город"}</p>
       </header>
 
       <aside className="prototype-notice">
@@ -54,8 +55,9 @@ function App() {
         <p className="route-section-description">
           Расписание и остановки проверены по официальным источникам.
         </p>
-        <OfficialRouteCard route={route075Data} />
-        <OfficialRouteCard route={route076Data} />
+        {officialRoutes.map((route) => (
+          <OfficialRouteCard key={route.id} route={route} />
+        ))}
       </section>
 
       <section className="route-section demo-routes-section">

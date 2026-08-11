@@ -1,0 +1,81 @@
+.scheduleDirection {
+  min-width: 0;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: #f3f8f5;
+}
+
+.directionTitle {
+  margin: 0 0 12px;
+  overflow-wrap: anywhere;
+  color: #30463a;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.nextDeparturesLabel {
+  margin: 0 0 8px;
+  color: #748078;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.departureList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.departureTime {
+  min-width: 0;
+  padding: 6px 4px;
+  border: 1px solid #d8e6dc;
+  border-radius: 7px;
+  color: #263d2f;
+  background-color: #ffffff;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.noDepartures {
+  margin: 0;
+  color: #39483f;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.scheduleButton {
+  min-height: 38px;
+  margin-top: 12px;
+  padding: 7px 11px;
+  border: 1px solid #a9c5b3;
+  border-radius: 9px;
+  color: #21613d;
+  background-color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.scheduleButton:hover {
+  border-color: #79a789;
+  background-color: #f8fbf9;
+}
+
+.scheduleButton:focus-visible {
+  outline: 3px solid rgba(40, 118, 74, 0.2);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .departureList {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
