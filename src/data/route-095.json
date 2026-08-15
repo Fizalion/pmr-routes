@@ -1,0 +1,309 @@
+{
+  "id": "route-095-tiraspol-rybnitsa",
+  "status": "active",
+  "slug": "tiraspol-rybnitsa",
+  "officialNumber": "095",
+  "name": "Тирасполь — Рыбница",
+  "category": "междугородный",
+  "directions": {
+    "forward": {
+      "from": "Тирасполь",
+      "to": "Рыбница"
+    },
+    "backward": {
+      "from": "Рыбница",
+      "to": "Тирасполь"
+    }
+  },
+  "source": {
+    "structure": {
+      "name": "Приказ МЭР №462",
+      "date": "2020-06-24"
+    },
+    "schedule": {
+      "name": "ОАО «Автостанции Приднестровья»",
+      "channel": "официальная Viber-группа",
+      "checkedAt": "2026-08-12"
+    }
+  },
+  "schedule": {
+    "forwardPublishedAt": "2026-08-12",
+    "backwardPublishedAt": "2026-08-14",
+    "forwardServiceDays": "ежедневно",
+    "backwardServiceDays": "ежедневно",
+    "forwardDepartures": [
+      "05:55",
+      "06:20",
+      "06:45",
+      "07:15",
+      "07:45",
+      "09:00",
+      "09:55",
+      "11:25",
+      "12:00",
+      "13:00",
+      "14:50",
+      "15:15",
+      "15:50",
+      "17:15"
+    ],
+    "backwardDepartures": [
+      "07:15",
+      "08:00",
+      "08:35",
+      "09:30",
+      "10:05",
+      "11:25",
+      "12:10",
+      "13:40",
+      "14:35",
+      "15:05",
+      "15:50",
+      "16:35",
+      "17:30",
+      "18:30"
+    ]
+  },
+  "stops": [
+    {
+      "id": "tiraspol-as",
+      "displayOrder": 1,
+      "name": "АС Тирасполь",
+      "address": "ул. Ленина, 59б",
+      "settlement": "г. Тирасполь",
+      "distanceFromStart": 0,
+      "distanceBetweenPrevious": 0,
+      "distanceToEnd": 123.7
+    },
+    {
+      "id": "malaeshty",
+      "displayOrder": 2,
+      "name": "Малаешты",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 17.6,
+      "distanceBetweenPrevious": 17.6,
+      "distanceToEnd": 106.1
+    },
+    {
+      "id": "butor",
+      "displayOrder": 3,
+      "name": "Бутор",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 30.9,
+      "distanceBetweenPrevious": 13.3,
+      "distanceToEnd": 92.8
+    },
+    {
+      "id": "tashlyk",
+      "displayOrder": 4,
+      "name": "Ташлык",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 32.7,
+      "distanceBetweenPrevious": 1.8,
+      "distanceToEnd": 91
+    },
+    {
+      "id": "krasnaya-gorka",
+      "displayOrder": 5,
+      "name": "Красная Горка",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 43.3,
+      "distanceBetweenPrevious": 10.6,
+      "distanceToEnd": 80.4
+    },
+    {
+      "id": "delakeu",
+      "displayOrder": 6,
+      "name": "Делакеу",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 44.3,
+      "distanceBetweenPrevious": 1,
+      "distanceToEnd": 79.4
+    },
+    {
+      "id": "grigoriopol-dkp",
+      "displayOrder": 7,
+      "name": "ДКП Григориополь",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 44.7,
+      "distanceBetweenPrevious": 0.4,
+      "distanceToEnd": 79
+    },
+    {
+      "id": "grigoriopol-as",
+      "displayOrder": 8,
+      "name": "АС Григориополь",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 45.5,
+      "distanceBetweenPrevious": 0.8,
+      "distanceToEnd": 78.2
+    },
+    {
+      "id": "dorotskoe",
+      "displayOrder": 9,
+      "name": "Дороцкое",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 52.5,
+      "distanceBetweenPrevious": 7,
+      "distanceToEnd": 71.2
+    },
+    {
+      "id": "koshnitsa",
+      "displayOrder": 10,
+      "name": "Кошница",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 54.4,
+      "distanceBetweenPrevious": 1.9,
+      "distanceToEnd": 69.3
+    },
+    {
+      "id": "dubossary-as",
+      "displayOrder": 11,
+      "name": "АС Дубоссары",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 62.7,
+      "distanceBetweenPrevious": 8.3,
+      "distanceToEnd": 61
+    },
+    {
+      "id": "rogi",
+      "displayOrder": 12,
+      "name": "Роги",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 71.8,
+      "distanceBetweenPrevious": 9.1,
+      "distanceToEnd": 51.9
+    },
+    {
+      "id": "goyany",
+      "displayOrder": 13,
+      "name": "Гояны",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 76.1,
+      "distanceBetweenPrevious": 4.3,
+      "distanceToEnd": 47.6
+    },
+    {
+      "id": "tsybulovka",
+      "displayOrder": 14,
+      "name": "Цыбулёвка",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 82.8,
+      "distanceBetweenPrevious": 6.7,
+      "distanceToEnd": 40.9
+    },
+    {
+      "id": "garmatskoe",
+      "displayOrder": 15,
+      "name": "Гармацкое",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 85.3,
+      "distanceBetweenPrevious": 2.5,
+      "distanceToEnd": 38.4
+    },
+    {
+      "id": "mikhailovka",
+      "displayOrder": 16,
+      "name": "Михайловка",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 89.7,
+      "distanceBetweenPrevious": 4.4,
+      "distanceToEnd": 34
+    },
+    {
+      "id": "zhura",
+      "displayOrder": 17,
+      "name": "Жура",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 95,
+      "distanceBetweenPrevious": 5.3,
+      "distanceToEnd": 28.7
+    },
+    {
+      "id": "butuchany",
+      "displayOrder": 18,
+      "name": "Бутучаны",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 98.3,
+      "distanceBetweenPrevious": 3.3,
+      "distanceToEnd": 25.4
+    },
+    {
+      "id": "popenki",
+      "displayOrder": 19,
+      "name": "Попенки",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 105.5,
+      "distanceBetweenPrevious": 7.2,
+      "distanceToEnd": 18.2
+    },
+    {
+      "id": "zozulyany",
+      "displayOrder": 20,
+      "name": "Зозуляны",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 107.5,
+      "distanceBetweenPrevious": 2,
+      "distanceToEnd": 16.2
+    },
+    {
+      "id": "vykhvatintsy",
+      "displayOrder": 21,
+      "name": "Выхватинцы",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 111.3,
+      "distanceBetweenPrevious": 3.8,
+      "distanceToEnd": 12.4
+    },
+    {
+      "id": "voronkovo",
+      "displayOrder": 22,
+      "name": "Воронково",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 116.8,
+      "distanceBetweenPrevious": 5.5,
+      "distanceToEnd": 6.9
+    },
+    {
+      "id": "gidirim",
+      "displayOrder": 23,
+      "name": "Гидирим",
+      "address": "",
+      "settlement": "",
+      "distanceFromStart": 117.3,
+      "distanceBetweenPrevious": 0.5,
+      "distanceToEnd": 6.4
+    },
+    {
+      "id": "rybnitsa-as",
+      "displayOrder": 24,
+      "name": "АС Рыбница",
+      "address": "ул. Вальченко, 12/1",
+      "settlement": "г. Рыбница",
+      "distanceFromStart": 123.7,
+      "distanceBetweenPrevious": 6.4,
+      "distanceToEnd": 0
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import type { RouteStatus } from "./route";
+
 export type OfficialRouteDirection = {
   from: string;
   to: string;
@@ -49,4 +51,6 @@ export type OfficialRoute = {
   source: OfficialRouteSources;
   schedule: OfficialRouteSchedule;
   stops: OfficialRouteStop[];
+  status: RouteStatus;
+  slug: string;
 };

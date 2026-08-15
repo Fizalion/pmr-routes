@@ -13,6 +13,7 @@
   "routes": [
     {
       "id": "tiraspol-minibus-2",
+      "status": "demo",
       "number": "2",
       "type": "minibus",
       "name": "м/н Новотираспольский — ТЦ «Тернополь»",
@@ -59,6 +60,7 @@
     },
     {
       "id": "tiraspol-minibus-8",
+      "status": "demo",
       "number": "8",
       "type": "minibus",
       "name": "ул. Одесская — пер. Западный",
@@ -145,6 +147,7 @@
     },
     {
       "id": "tiraspol-minibus-10",
+      "status": "demo",
       "number": "10",
       "type": "minibus",
       "name": "ул. Чайковского — «Тиротекс»",
@@ -208,6 +211,7 @@
     },
     {
       "id": "tiraspol-minibus-12",
+      "status": "demo",
       "number": "12",
       "type": "minibus",
       "name": "МРЭО ГАИ — вокзал — Балка — МРЭО ГАИ",

@@ -1,3 +1,5 @@
+import type { RouteStatus } from "./route";
+
 export type TransportType = "minibus";
 
 export type ServiceDays = "daily";
@@ -62,6 +64,7 @@ export type TransportRoute = {
   id: string;
   number: string;
   type: TransportType;
+  status: RouteStatus;
   name: string;
   isCircular?: boolean;
   direction: RouteDirection;

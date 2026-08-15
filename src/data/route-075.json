@@ -1,5 +1,7 @@
 {
   "id": "route-075-tiraspol-dnestrovsk",
+  "status": "active",
+  "slug": "tiraspol-dnestrovsk",
   "officialNumber": "075",
   "name": "Тирасполь — Днестровск",
   "category": "пригородный",
