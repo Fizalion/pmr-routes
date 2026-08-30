@@ -53,6 +53,65 @@
   line-height: 1.3;
 }
 
+.departurePoint {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 14px;
+  padding: 12px;
+  border: 1px solid #c9ddcf;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.departurePointLabel {
+  margin: 0 0 5px;
+  color: #66756c;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.departurePoint strong {
+  color: #1e2d23;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.departurePoint span {
+  margin-top: 2px;
+  color: #66756c;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.departurePoint a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border: 1px solid #a9c5b3;
+  border-radius: 8px;
+  color: #21613d;
+  background-color: #f3f8f5;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.departurePoint a:hover {
+  border-color: #79a789;
+  background-color: #e9f3ec;
+}
+
+.departurePoint a:focus-visible {
+  outline: 3px solid rgba(40, 118, 74, 0.2);
+  outline-offset: 2px;
+}
+
 .scheduleGrid {
   display: grid;
   gap: 18px;

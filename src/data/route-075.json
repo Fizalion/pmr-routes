@@ -8,11 +8,19 @@
   "directions": {
     "forward": {
       "from": "Тирасполь",
-      "to": "Днестровск"
+      "to": "Днестровск",
+      "departurePoint": {
+        "name": "ДКП «Центральный рынок»",
+        "address": "ул. Карла Маркса, 42"
+      }
     },
     "backward": {
       "from": "Днестровск",
-      "to": "Тирасполь"
+      "to": "Тирасполь",
+      "departurePoint": {
+        "name": "Автовокзал Днестровска",
+        "address": "ул. Котовского, 4"
+      }
     }
   },
   "source": {
@@ -23,11 +31,11 @@
     "schedule": {
       "name": "ОАО «Автостанции Приднестровья»",
       "channel": "официальная Viber-группа",
-      "checkedAt": "2026-08-15"
+      "checkedAt": "2026-08-29"
     }
   },
   "schedule": {
-    "forwardPublishedAt": "2026-08-15",
+    "forwardPublishedAt": "2026-08-29",
     "backwardPublishedAt": "2026-08-02",
     "forwardDepartures": [
       "05:00",

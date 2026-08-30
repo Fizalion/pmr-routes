@@ -25,7 +25,9 @@ const OfficialRouteCard = ({
   return (
     <article className={styles.card}>
       <header className={styles.header}>
-        <p className={styles.routeNumber}>Маршрут {route.officialNumber}</p>
+        {route.officialNumber && (
+          <p className={styles.routeNumber}>Маршрут {route.officialNumber}</p>
+        )}
         <h2 className={styles.routeName}>{route.name}</h2>
         <p className={styles.category}>{route.category}</p>
       </header>
@@ -38,6 +40,8 @@ const OfficialRouteCard = ({
             to={route.directions.forward.to}
             departures={route.schedule.forwardDepartures}
             scheduleId={forwardScheduleId}
+            status={route.schedule.forwardStatus}
+            departurePoint={route.directions.forward.departurePoint}
           />
 
           <ScheduleDirection
@@ -45,11 +49,13 @@ const OfficialRouteCard = ({
             to={route.directions.backward.to}
             departures={route.schedule.backwardDepartures}
             scheduleId={backwardScheduleId}
+            status={route.schedule.backwardStatus}
+            departurePoint={route.directions.backward.departurePoint}
           />
         </div>
       </section>
 
-      {showStops && (
+      {showStops && stops.length > 0 && (
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Остановки</h2>
           <ul className={styles.stopList}>
