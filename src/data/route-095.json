@@ -11,7 +11,8 @@
       "to": "Рыбница",
       "departurePoint": {
         "name": "ДКП «Центральный рынок»",
-        "address": "ул. Карла Маркса, 42"
+        "address": "ул. Карла Маркса, 42",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=ДКП+Центральный+рынок+Тирасполь+улица+Карла+Маркса+42"
       }
     },
     "backward": {
@@ -19,7 +20,8 @@
       "to": "Тирасполь",
       "departurePoint": {
         "name": "Автостанция Рыбницы",
-        "address": "ул. Вальченко, 12/1"
+        "address": "ул. Вальченко, 12/1",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Автостанция+Рыбница+улица+Вальченко+12%2F1"
       }
     }
   },

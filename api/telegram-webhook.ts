@@ -9,6 +9,8 @@ type TelegramMessage = {
   document?: { file_id: string };
 };
 
+export const config = { runtime: "edge" };
+
 type TelegramUpdate = {
   message?: TelegramMessage;
 };

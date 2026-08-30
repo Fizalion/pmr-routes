@@ -10,7 +10,8 @@
       "to": "Кишинёв",
       "departurePoint": {
         "name": "Автостанция Рыбницы",
-        "address": "ул. Вальченко, 12/1"
+        "address": "ул. Вальченко, 12/1",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Автостанция+Рыбница+улица+Вальченко+12%2F1"
       }
     },
     "backward": {
