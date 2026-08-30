@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import OfficialRouteCard from "../../components/OfficialRouteCard/OfficialRouteCard";
 import RouteList from "../../components/RouteList/RouteList";
+import { feedbackUrl } from "../../config/contact";
 import { officialRoutes } from "../../data/officialRoutes";
 import transportJson from "../../data/transport.json";
 import type { RouteStatus } from "../../types/route";
@@ -33,7 +34,7 @@ function CatalogPage() {
 
   const filteredOfficialRoutes = officialRoutes.filter(
     (route) =>
-      route.officialNumber.includes(normalizedSearchQuery) ||
+      route.officialNumber?.includes(normalizedSearchQuery) ||
       route.name.toLowerCase().includes(normalizedSearchQuery) ||
       route.directions.forward.from
         .toLowerCase()
@@ -61,7 +62,7 @@ function CatalogPage() {
           проверяю источники и постепенно уточняю данные.
         </p>
         <a
-          href="https://t.me/fizaliondev/118"
+          href={feedbackUrl}
           target="_blank"
           rel="noopener noreferrer"
         >

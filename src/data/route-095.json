@@ -8,11 +8,19 @@
   "directions": {
     "forward": {
       "from": "Тирасполь",
-      "to": "Рыбница"
+      "to": "Рыбница",
+      "departurePoint": {
+        "name": "ДКП «Центральный рынок»",
+        "address": "ул. Карла Маркса, 42"
+      }
     },
     "backward": {
       "from": "Рыбница",
-      "to": "Тирасполь"
+      "to": "Тирасполь",
+      "departurePoint": {
+        "name": "Автостанция Рыбницы",
+        "address": "ул. Вальченко, 12/1"
+      }
     }
   },
   "source": {
@@ -23,12 +31,12 @@
     "schedule": {
       "name": "ОАО «Автостанции Приднестровья»",
       "channel": "официальная Viber-группа",
-      "checkedAt": "2026-08-22"
+      "checkedAt": "2026-08-30"
     }
   },
   "schedule": {
-    "forwardPublishedAt": "2026-08-12",
-    "backwardPublishedAt": "2026-08-22",
+    "forwardPublishedAt": "2026-08-28",
+    "backwardPublishedAt": "2026-08-30",
     "forwardServiceDays": "ежедневно",
     "backwardServiceDays": "ежедневно",
     "forwardDepartures": [
@@ -42,6 +50,7 @@
       "11:25",
       "12:00",
       "13:00",
+      "14:00",
       "14:50",
       "15:15",
       "15:50",
@@ -51,7 +60,6 @@
       "07:15",
       "08:00",
       "08:35",
-      "09:30",
       "10:05",
       "11:25",
       "12:10",

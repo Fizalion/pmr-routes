@@ -1,8 +1,15 @@
 import type { RouteStatus } from "./route";
 
+export type OfficialRouteDeparturePoint = {
+  name: string;
+  address?: string;
+  mapUrl?: string;
+};
+
 export type OfficialRouteDirection = {
   from: string;
   to: string;
+  departurePoint?: OfficialRouteDeparturePoint;
 };
 
 export type OfficialRouteDirections = {
@@ -10,9 +17,13 @@ export type OfficialRouteDirections = {
   backward: OfficialRouteDirection;
 };
 
+export type OfficialRouteScheduleStatus = "available" | "unavailable";
+
 export type OfficialRouteSchedule = {
   forwardDepartures: string[];
   backwardDepartures: string[];
+  forwardStatus?: OfficialRouteScheduleStatus;
+  backwardStatus?: OfficialRouteScheduleStatus;
 };
 
 export type OfficialRouteStructureSource = {
@@ -27,7 +38,7 @@ export type OfficialRouteScheduleSource = {
 };
 
 export type OfficialRouteSources = {
-  structure: OfficialRouteStructureSource;
+  structure?: OfficialRouteStructureSource;
   schedule: OfficialRouteScheduleSource;
 };
 
@@ -44,7 +55,7 @@ export type OfficialRouteStop = {
 
 export type OfficialRoute = {
   id: string;
-  officialNumber: string;
+  officialNumber?: string;
   name: string;
   category: string;
   directions: OfficialRouteDirections;
