@@ -13,7 +13,45 @@
         "name": "ДКП «Центральный рынок»",
         "address": "ул. Карла Маркса, 42",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=ДКП+Центральный+рынок+Тирасполь+улица+Карла+Маркса+42"
-      }
+      },
+      "travelTimePoints": [
+        {
+          "id": "lechgorodok",
+          "name": "ДКП «Лечгородок»",
+          "minMinutes": 0,
+          "maxMinutes": 0,
+          "medianMinutes": 0,
+          "sampleSize": 4,
+          "isReference": true
+        },
+        {
+          "id": "sukleya",
+          "name": "Суклея",
+          "minMinutes": 3,
+          "maxMinutes": 6,
+          "medianMinutes": 3.73,
+          "sampleSize": 4,
+          "isReference": false
+        },
+        {
+          "id": "karagash",
+          "name": "Карагаш",
+          "minMinutes": 10,
+          "maxMinutes": 13,
+          "medianMinutes": 11.8,
+          "sampleSize": 4,
+          "isReference": false
+        },
+        {
+          "id": "svetlana-store",
+          "name": "магазин «Светлана» — Слободзея, молдавская часть",
+          "minMinutes": 15,
+          "maxMinutes": 18,
+          "medianMinutes": 16.58,
+          "sampleSize": 4,
+          "isReference": false
+        }
+      ]
     },
     "backward": {
       "from": "Днестровск",
@@ -22,7 +60,54 @@
         "name": "Автовокзал Днестровска",
         "address": "ул. Котовского, 4",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Автовокзал+Днестровск+улица+Котовского+4"
-      }
+      },
+      "travelTimePoints": [
+        {
+          "id": "svetlana-store",
+          "name": "магазин «Светлана» — Слободзея, молдавская часть",
+          "minMinutes": 0,
+          "maxMinutes": 0,
+          "medianMinutes": 0,
+          "sampleSize": 5,
+          "isReference": true
+        },
+        {
+          "id": "karagash",
+          "name": "Карагаш",
+          "minMinutes": 4,
+          "maxMinutes": 6,
+          "medianMinutes": 4.56,
+          "sampleSize": 5,
+          "isReference": false
+        },
+        {
+          "id": "sukleya",
+          "name": "Суклея",
+          "minMinutes": 11,
+          "maxMinutes": 14,
+          "medianMinutes": 11.51,
+          "sampleSize": 5,
+          "isReference": false
+        },
+        {
+          "id": "lechgorodok",
+          "name": "ДКП «Лечгородок»",
+          "minMinutes": 13,
+          "maxMinutes": 17,
+          "medianMinutes": 13.51,
+          "sampleSize": 5,
+          "isReference": false
+        },
+        {
+          "id": "expo-center",
+          "name": "Экспоцентр",
+          "minMinutes": 18,
+          "maxMinutes": 22,
+          "medianMinutes": 18.35,
+          "sampleSize": 3,
+          "isReference": false
+        }
+      ]
     }
   },
   "source": {
