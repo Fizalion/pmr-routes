@@ -6,10 +6,21 @@ export type OfficialRouteDeparturePoint = {
   mapUrl?: string;
 };
 
+export type OfficialRouteTravelTimePoint = {
+  id: string;
+  name: string;
+  minMinutes: number;
+  maxMinutes: number;
+  medianMinutes: number;
+  sampleSize: number;
+  isReference: boolean;
+};
+
 export type OfficialRouteDirection = {
   from: string;
   to: string;
   departurePoint?: OfficialRouteDeparturePoint;
+  travelTimePoints?: OfficialRouteTravelTimePoint[];
 };
 
 export type OfficialRouteDirections = {

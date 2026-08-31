@@ -42,6 +42,7 @@ const OfficialRouteCard = ({
             scheduleId={forwardScheduleId}
             status={route.schedule.forwardStatus}
             departurePoint={route.directions.forward.departurePoint}
+            travelTimePoints={route.directions.forward.travelTimePoints}
           />
 
           <ScheduleDirection
@@ -51,6 +52,7 @@ const OfficialRouteCard = ({
             scheduleId={backwardScheduleId}
             status={route.schedule.backwardStatus}
             departurePoint={route.directions.backward.departurePoint}
+            travelTimePoints={route.directions.backward.travelTimePoints}
           />
         </div>
       </section>

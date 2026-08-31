@@ -2,9 +2,11 @@ import { useState } from "react";
 import type {
   OfficialRouteDeparturePoint,
   OfficialRouteScheduleStatus,
+  OfficialRouteTravelTimePoint,
 } from "../../types/officialRoute";
 import { missingScheduleUrl } from "../../config/contact";
 import DeparturePoint from "./DeparturePoint";
+import TravelTimeSection from "./TravelTimeSection";
 import styles from "./ScheduleDirection.module.css";
 
 type ScheduleDirectionProps = {
@@ -14,6 +16,7 @@ type ScheduleDirectionProps = {
   scheduleId: string;
   status?: OfficialRouteScheduleStatus;
   departurePoint?: OfficialRouteDeparturePoint;
+  travelTimePoints?: OfficialRouteTravelTimePoint[];
 };
 
 const getDepartureMinutes = (departure: string) => {
@@ -37,6 +40,7 @@ const ScheduleDirection = ({
   scheduleId,
   status = "available",
   departurePoint,
+  travelTimePoints,
 }: ScheduleDirectionProps) => {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
@@ -72,6 +76,7 @@ const ScheduleDirection = ({
         {from} → {to}
       </h3>
       {departurePoint && <DeparturePoint point={departurePoint} />}
+      {travelTimePoints && <TravelTimeSection points={travelTimePoints} />}
       <p className={styles.nextDeparturesLabel}>
         {isExpanded ? "Полное расписание" : "Следующие рейсы"}
       </p>

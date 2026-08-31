@@ -13,6 +13,86 @@
   line-height: 1.35;
 }
 
+.travelTimeSection {
+  margin-bottom: 14px;
+  padding: 12px;
+  border: 1px solid #cbdcea;
+  border-left: 4px solid #4f83b5;
+  border-radius: 10px;
+  color: #344454;
+  background-color: #f7fbff;
+}
+
+.travelTimeSection h4 {
+  margin: 0 0 8px;
+  color: #244968;
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.travelTimeSection p {
+  margin: 0 0 9px;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.travelTimeSection ul {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.travelTimeSection li {
+  min-width: 0;
+  padding: 8px 9px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.travelTimeSection li strong,
+.travelTimeSection li span,
+.travelTimeSection li small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.travelTimeSection li strong {
+  margin-bottom: 3px;
+  color: #263d4e;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.travelTimeSection li span {
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+}
+
+.travelTimeSection li small {
+  margin-top: 2px;
+  color: #66798a;
+  font-size: 0.7rem;
+}
+
+.travelTimeSection p:last-of-type {
+  margin-bottom: 0;
+  color: #5f7181;
+}
+
+.travelTimeCta {
+  display: block;
+  max-width: 100%;
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+  color: #2563a9;
+  font-size: 0.76rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
 .nextDeparturesLabel {
   margin: 0 0 8px;
   color: #748078;
