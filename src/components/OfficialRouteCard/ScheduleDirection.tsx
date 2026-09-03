@@ -1,13 +1,13 @@
 import { useState } from "react";
+import { feedbackUrl, missingScheduleUrl } from "../../config/contact";
 import type {
   OfficialRouteDeparturePoint,
   OfficialRouteScheduleStatus,
   OfficialRouteTravelTimePoint,
 } from "../../types/officialRoute";
-import { missingScheduleUrl } from "../../config/contact";
 import DeparturePoint from "./DeparturePoint";
-import TravelTimeSection from "./TravelTimeSection";
 import styles from "./ScheduleDirection.module.css";
+import TravelTimeSection from "./TravelTimeSection";
 
 type ScheduleDirectionProps = {
   from: string;
@@ -17,6 +17,7 @@ type ScheduleDirectionProps = {
   status?: OfficialRouteScheduleStatus;
   departurePoint?: OfficialRouteDeparturePoint;
   travelTimePoints?: OfficialRouteTravelTimePoint[];
+  note?: string;
 };
 
 const getDepartureMinutes = (departure: string) => {
@@ -41,6 +42,7 @@ const ScheduleDirection = ({
   status = "available",
   departurePoint,
   travelTimePoints,
+  note,
 }: ScheduleDirectionProps) => {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
@@ -57,7 +59,9 @@ const ScheduleDirection = ({
   if (status === "unavailable") {
     return (
       <div className={styles.scheduleDirection}>
-        <h3 className={styles.directionTitle}>{from} → {to}</h3>
+        <h3 className={styles.directionTitle}>
+          {from} → {to}
+        </h3>
         {departurePoint && <DeparturePoint point={departurePoint} />}
         <div className={styles.unavailableSchedule}>
           <strong>Актуального расписания пока нет</strong>
@@ -77,6 +81,18 @@ const ScheduleDirection = ({
       </h3>
       {departurePoint && <DeparturePoint point={departurePoint} />}
       {travelTimePoints && <TravelTimeSection points={travelTimePoints} />}
+
+      {status === "estimated" && (
+        <div className={styles.estimatedSchedule}>
+          <strong>Ориентировочное расписание</strong>
+          <p>По информации пассажиров. Фактическое время может отличаться.</p>
+          {note && <p>{note}</p>}
+          <a href={feedbackUrl} target="_blank" rel="noreferrer">
+            Нашли неточность? Напишите нам
+          </a>
+        </div>
+      )}
+
       <p className={styles.nextDeparturesLabel}>
         {isExpanded ? "Полное расписание" : "Следующие рейсы"}
       </p>

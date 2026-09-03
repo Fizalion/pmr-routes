@@ -28,13 +28,18 @@ export type OfficialRouteDirections = {
   backward: OfficialRouteDirection;
 };
 
-export type OfficialRouteScheduleStatus = "available" | "unavailable";
+export type OfficialRouteScheduleStatus =
+  | "available"
+  | "estimated"
+  | "unavailable";
 
 export type OfficialRouteSchedule = {
   forwardDepartures: string[];
   backwardDepartures: string[];
   forwardStatus?: OfficialRouteScheduleStatus;
   backwardStatus?: OfficialRouteScheduleStatus;
+  forwardNote?: string;
+  backwardNote?: string;
 };
 
 export type OfficialRouteStructureSource = {

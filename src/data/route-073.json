@@ -1,0 +1,124 @@
+{
+  "id": "route-073-tiraspol-glinoe",
+  "status": "active",
+  "slug": "tiraspol-glinoe",
+  "officialNumber": "073",
+  "name": "Тирасполь — Глиное (Слободзейский район)",
+  "category": "пригородный",
+  "directions": {
+    "forward": {
+      "from": "Тирасполь",
+      "to": "Глиное",
+      "departurePoint": {
+        "name": "ДКП «Центральный рынок»",
+        "address": "ул. Карла Маркса, 42",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=ДКП+Центральный+рынок+Тирасполь+улица+Карла+Маркса+42"
+      }
+    },
+    "backward": {
+      "from": "Глиное",
+      "to": "Тирасполь"
+    }
+  },
+  "source": {
+    "structure": {
+      "name": "Приказ МЭР №462",
+      "date": "2020-06-24"
+    },
+    "schedule": {
+      "name": "ОАО «Автостанции Приднестровья»",
+      "channel": "информационный стенд",
+      "checkedAt": "2026-08-29"
+    }
+  },
+  "schedule": {
+    "forwardPublishedAt": "2026-08-29",
+    "forwardStatus": "available",
+    "backwardStatus": "estimated",
+    "backwardNote": "По информации пассажира, в 06:30 маршрутка уже находится в Глином. Точное время и место отправления неизвестны.",
+    "forwardDepartures": ["08:00", "10:00", "12:00", "15:00", "17:00"],
+    "backwardDepartures": ["09:00", "11:00", "13:00", "16:00", "18:00"]
+  },
+  "stops": [
+    {
+      "id": "tiraspol-central-market",
+      "displayOrder": 1,
+      "name": "ДКП «Центральный рынок»",
+      "address": "ул. Карла Маркса, 42",
+      "settlement": "г. Тирасполь",
+      "distanceFromStart": 0.0,
+      "distanceBetweenPrevious": 0.0,
+      "distanceToEnd": 31.2
+    },
+    {
+      "id": "tiraspol-lechgorodok",
+      "displayOrder": 2,
+      "name": "ДКП «Лечгородок»",
+      "address": "ул. Мира, 50б",
+      "settlement": "г. Тирасполь",
+      "distanceFromStart": 3.9,
+      "distanceBetweenPrevious": 3.9,
+      "distanceToEnd": 27.3
+    },
+    {
+      "id": "sukleya",
+      "displayOrder": 3,
+      "name": "Суклея",
+      "address": "ул. Гагарина, 173",
+      "settlement": "с. Суклея",
+      "distanceFromStart": 6.6,
+      "distanceBetweenPrevious": 2.7,
+      "distanceToEnd": 24.6
+    },
+    {
+      "id": "karagash",
+      "displayOrder": 4,
+      "name": "Карагаш",
+      "address": "ул. Ленина, 80а",
+      "settlement": "с. Карагаш",
+      "distanceFromStart": 11.0,
+      "distanceBetweenPrevious": 4.4,
+      "distanceToEnd": 20.2
+    },
+    {
+      "id": "slobodzeya-dkp",
+      "displayOrder": 5,
+      "name": "ДКП Слободзея",
+      "address": "ул. Ленина, 99",
+      "settlement": "г. Слободзея",
+      "distanceFromStart": 15.5,
+      "distanceBetweenPrevious": 4.5,
+      "distanceToEnd": 15.7
+    },
+    {
+      "id": "slobodzeya-russian-part",
+      "displayOrder": 6,
+      "name": "Русская часть",
+      "address": "",
+      "settlement": "г. Слободзея",
+      "distanceFromStart": 19.4,
+      "distanceBetweenPrevious": 3.9,
+      "distanceToEnd": 11.8
+    },
+    {
+      "id": "chobruchi",
+      "displayOrder": 7,
+      "name": "Чобручи",
+      "address": "",
+      "settlement": "с. Чобручи",
+      "distanceFromStart": 22.3,
+      "distanceBetweenPrevious": 2.9,
+      "distanceToEnd": 8.9
+    },
+    {
+      "id": "glinoe",
+      "displayOrder": 8,
+      "name": "Глиное",
+      "address": "",
+      "settlement": "с. Глиное",
+      "distanceFromStart": 31.2,
+      "distanceBetweenPrevious": 8.9,
+      "distanceToEnd": 0.0
+    }
+  ]
+}
