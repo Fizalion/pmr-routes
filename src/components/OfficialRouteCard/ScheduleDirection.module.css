@@ -131,6 +131,53 @@
   line-height: 1.45;
 }
 
+.estimatedSchedule {
+  margin-bottom: 12px;
+  padding: 11px 12px;
+  border: 1px solid #e4d5a9;
+  border-radius: 10px;
+  color: #5f5438;
+  background-color: #fffaf0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.estimatedSchedule strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #594716;
+  font-size: 0.84rem;
+}
+
+.estimatedSchedule p {
+  margin: 0 0 9px;
+}
+
+.estimatedSchedule a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  max-width: 100%;
+  padding: 6px 9px;
+  border: 1px solid #d5bd79;
+  border-radius: 8px;
+  color: #765a0c;
+  background-color: #ffffff;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.estimatedSchedule a:hover {
+  border-color: #b99b49;
+  background-color: #fffdf7;
+}
+
+.estimatedSchedule a:focus-visible {
+  outline: 3px solid rgba(185, 155, 73, 0.22);
+  outline-offset: 2px;
+}
+
 .unavailableSchedule {
   padding: 12px;
   border: 1px solid #d8e3ef;
