@@ -283,10 +283,8 @@ export default async function handler(request: Request) {
       message_id: update.message.message_id,
     },
   );
-  const adminCardText = getAdminCardText(
-    update.message,
-    getMessageSource(update.message),
-  );
+  const messageSource = getMessageSource(update.message);
+  const adminCardText = getAdminCardText(update.message, messageSource);
 
   if (adminCardText) {
     await sendTelegramRequest("sendMessage", {
@@ -303,6 +301,9 @@ export default async function handler(request: Request) {
       },
     });
   }
+
+  if (!messageSource) return Response.json({ ok: true });
+
   try {
     await sendTelegramRequest("sendMessage", {
       chat_id: update.message.chat.id,
