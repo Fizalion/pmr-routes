@@ -19,10 +19,18 @@ type TelegramMessage = {
   reply_to_message?: TelegramMessage;
 };
 
+type TelegramCallbackQuery = {
+  id: string;
+  from: TelegramUser;
+  message?: TelegramMessage;
+  data?: string;
+};
+
 export const config = { runtime: "edge" };
 
 type TelegramUpdate = {
   message?: TelegramMessage;
+  callback_query?: TelegramCallbackQuery;
 };
 
 const HELP_TEXT =
@@ -172,6 +180,23 @@ export default async function handler(request: Request) {
   }
 
   const update = (await request.json()) as TelegramUpdate;
+  const callback = update.callback_query;
+  const callbackChatId = callback?.message?.chat.id;
+  const replyTarget = callback?.data?.match(/^reply:(\d+)$/)?.[1];
+
+  if (callback && String(callbackChatId) === getFeedbackChatId() && replyTarget) {
+    await sendTelegramRequest("answerCallbackQuery", {
+      callback_query_id: callback.id,
+    });
+    await sendTelegramRequest("sendMessage", {
+      chat_id: callbackChatId,
+      text: `Ответ пользователю\nchat_id: ${replyTarget}`,
+      reply_markup: { force_reply: true },
+      reply_parameters: { message_id: callback.message?.message_id },
+    });
+    return Response.json({ ok: true });
+  }
+
   if (!update.message) return Response.json({ ok: true });
 
   if (String(update.message.chat.id) === getFeedbackChatId()) {
@@ -268,7 +293,14 @@ export default async function handler(request: Request) {
       chat_id: getFeedbackChatId(),
       text: adminCardText,
       parse_mode: "HTML",
+      link_preview_options: { is_disabled: true },
       reply_parameters: { message_id: forwardedMessage.message_id },
+      reply_markup: {
+        inline_keyboard: [[{
+          text: "Ответить",
+          callback_data: `reply:${update.message.chat.id}`,
+        }]],
+      },
     });
   }
   try {
