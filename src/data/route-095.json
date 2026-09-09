@@ -33,12 +33,12 @@
     "schedule": {
       "name": "ОАО «Автостанции Приднестровья»",
       "channel": "официальная Viber-группа",
-      "checkedAt": "2026-09-06"
+      "checkedAt": "2026-09-09"
     }
   },
   "schedule": {
-    "forwardPublishedAt": "2026-09-04",
-    "backwardPublishedAt": "2026-09-06",
+    "forwardPublishedAt": "2026-09-07",
+    "backwardPublishedAt": "2026-09-09",
     "forwardServiceDays": "ежедневно",
     "backwardServiceDays": "ежедневно",
     "forwardDepartures": [
@@ -52,13 +52,13 @@
       "11:25",
       "12:00",
       "13:00",
-      "14:00",
       "14:50",
       "15:15",
       "15:50",
       "17:15"
     ],
     "backwardDepartures": [
+      "06:30",
       "07:15",
       "08:00",
       "08:35",
@@ -66,13 +66,13 @@
       "10:05",
       "11:25",
       "12:10",
+      "12:50",
       "13:40",
       "14:35",
       "15:05",
       "15:50",
       "16:35",
-      "17:30",
-      "18:30"
+      "17:30"
     ]
   },
   "stops": [
