@@ -13,6 +13,11 @@
         "name": "ДКП «Центральный рынок»",
         "address": "ул. Карла Маркса, 42",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=ДКП+Центральный+рынок+Тирасполь+улица+Карла+Маркса+42"
+      },
+      "arrivalPoint": {
+        "name": "Автостанция Дубоссар",
+        "address": "ул. Свердлова, 68",
+        "phone": "0 (215) 3-45-60"
       }
     },
     "backward": {
@@ -21,6 +26,7 @@
       "departurePoint": {
         "name": "Автостанция Дубоссар",
         "address": "ул. Свердлова, 68",
+        "phone": "0 (215) 3-45-60",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Автостанция+Дубоссары+улица+Свердлова+68"
       }
     }
@@ -40,11 +46,11 @@
     "schedule": {
       "name": "ОАО «Автостанции Приднестровья»",
       "channel": "официальная Viber-группа",
-      "checkedAt": "2026-09-08"
+      "checkedAt": "2026-09-11"
     }
   },
   "schedule": {
-    "forwardPublishedAt": "2026-09-08",
+    "forwardPublishedAt": "2026-09-11",
     "backwardPublishedAt": "2026-09-06",
     "forwardServiceDays": "ежедневно",
     "forwardDepartures": [
@@ -64,10 +70,12 @@
       "12:25",
       "13:00",
       "13:30",
+      "14:00",
       "14:50",
       "15:15",
       "15:40",
       "15:50",
+      "16:20",
       "17:10",
       "17:15"
     ],

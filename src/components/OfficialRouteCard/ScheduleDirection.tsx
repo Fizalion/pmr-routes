@@ -2,6 +2,7 @@ import { useState } from "react";
 import { feedbackUrl, missingScheduleUrl } from "../../config/contact";
 import type {
   OfficialRouteDeparturePoint,
+  OfficialRouteFare,
   OfficialRouteScheduleStatus,
   OfficialRouteTravelTimePoint,
 } from "../../types/officialRoute";
@@ -16,6 +17,8 @@ type ScheduleDirectionProps = {
   scheduleId: string;
   status?: OfficialRouteScheduleStatus;
   departurePoint?: OfficialRouteDeparturePoint;
+  arrivalPoint?: OfficialRouteDeparturePoint;
+  fare?: OfficialRouteFare;
   travelTimePoints?: OfficialRouteTravelTimePoint[];
   note?: string;
 };
@@ -41,6 +44,8 @@ const ScheduleDirection = ({
   scheduleId,
   status = "available",
   departurePoint,
+  arrivalPoint,
+  fare,
   travelTimePoints,
   note,
 }: ScheduleDirectionProps) => {
@@ -80,6 +85,15 @@ const ScheduleDirection = ({
         {from} → {to}
       </h3>
       {departurePoint && <DeparturePoint point={departurePoint} />}
+      {arrivalPoint && (
+        <DeparturePoint point={arrivalPoint} label="Место прибытия" />
+      )}
+      {fare && (
+        <div className={styles.fare}>
+          <strong>Стоимость проезда: {fare.display}</strong>
+          {fare.note && <p>{fare.note}</p>}
+        </div>
+      )}
       {travelTimePoints && <TravelTimeSection points={travelTimePoints} />}
 
       {status === "estimated" && (

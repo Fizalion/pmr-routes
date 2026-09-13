@@ -1,0 +1,117 @@
+{
+  "id": "route-077-tiraspol-kamenka",
+  "status": "active",
+  "slug": "tiraspol-kamenka",
+  "officialNumber": "077",
+  "name": "Тирасполь — Каменка",
+  "category": "междугородный",
+  "showFeedbackPrompt": true,
+  "distance": 172.5,
+  "directions": {
+    "forward": {
+      "from": "Тирасполь",
+      "to": "Каменка",
+      "departurePoint": {
+        "name": "ДКП «Центральный рынок»",
+        "address": "ул. Карла Маркса, 42",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=ДКП+Центральный+рынок+Тирасполь+улица+Карла+Маркса+42"
+      },
+      "arrivalPoint": {
+        "name": "Санаторий «Днестр»",
+        "phone": "0 (216) 2-23-05",
+        "phoneLabel": "Справочная АС Каменка"
+      },
+      "fare": {
+        "amount": 143.85,
+        "currency": "руб. ПМР",
+        "display": "143,85 руб. ПМР",
+        "note": "Стоимость может измениться. Уточняйте перед поездкой."
+      }
+    },
+    "backward": {
+      "from": "Каменка",
+      "to": "Тирасполь",
+      "fare": {
+        "amount": 143.85,
+        "currency": "руб. ПМР",
+        "display": "143,85 руб. ПМР",
+        "note": "Стоимость может измениться. Уточняйте перед поездкой."
+      }
+    }
+  },
+  "source": {
+    "structure": {
+      "name": "Приказ МЭР №462",
+      "date": "2020-06-24"
+    },
+    "schedule": {
+      "name": "ОАО «Автостанции Приднестровья»",
+      "checkedAt": "2026-09-12"
+    },
+    "fare": {
+      "name": "ОАО «Автостанции Приднестровья»",
+      "checkedAt": "2026-09-12"
+    }
+  },
+  "schedule": {
+    "forwardStatus": "available",
+    "backwardStatus": "available",
+    "forwardPublishedAt": "2026-09-10",
+    "backwardPublishedAt": "2026-09-12",
+    "forwardDepartures": [
+      "05:55",
+      "07:15",
+      "07:45",
+      "09:00",
+      "13:00",
+      "15:15",
+      "15:50"
+    ],
+    "backwardDepartures": [
+      "05:45",
+      "07:25",
+      "08:30",
+      "12:10",
+      "13:10",
+      "14:00",
+      "15:10"
+    ]
+  },
+  "stops": [
+    { "id": "tiraspol-central-market", "displayOrder": 1, "name": "ДКП «Центральный рынок»", "address": "ул. Карла Маркса, 42", "settlement": "г. Тирасполь" },
+    { "id": "malaeshty", "displayOrder": 2, "name": "Малаешты", "address": "", "settlement": "" },
+    { "id": "butor", "displayOrder": 3, "name": "Бутор", "address": "", "settlement": "" },
+    { "id": "tashlyk", "displayOrder": 4, "name": "Ташлык", "address": "", "settlement": "" },
+    { "id": "krasnaya-gorka", "displayOrder": 5, "name": "Красная Горка", "address": "", "settlement": "" },
+    { "id": "delakeu", "displayOrder": 6, "name": "Делакеу", "address": "", "settlement": "" },
+    { "id": "grigoriopol", "displayOrder": 7, "name": "Григориополь", "address": "", "settlement": "" },
+    { "id": "dorotskoe", "displayOrder": 8, "name": "Дороцкое", "address": "", "settlement": "" },
+    { "id": "koshnitsa", "displayOrder": 9, "name": "Кошница", "address": "", "settlement": "" },
+    { "id": "dubossary", "displayOrder": 10, "name": "Дубоссары", "address": "", "settlement": "" },
+    { "id": "rogi", "displayOrder": 11, "name": "Роги", "address": "", "settlement": "" },
+    { "id": "goyany", "displayOrder": 12, "name": "Гояны", "address": "", "settlement": "" },
+    { "id": "tsybulovka", "displayOrder": 13, "name": "Цыбулёвка", "address": "", "settlement": "" },
+    { "id": "garmatskoe", "displayOrder": 14, "name": "Гармацкое", "address": "", "settlement": "" },
+    { "id": "mikhailovka", "displayOrder": 15, "name": "Михайловка", "address": "", "settlement": "" },
+    { "id": "zhura", "displayOrder": 16, "name": "Жура", "address": "", "settlement": "" },
+    { "id": "butuchany", "displayOrder": 17, "name": "Бутучаны", "address": "", "settlement": "" },
+    { "id": "popenki", "displayOrder": 18, "name": "Попенки", "address": "", "settlement": "" },
+    { "id": "zozulyany", "displayOrder": 19, "name": "Зозуляны", "address": "", "settlement": "" },
+    { "id": "vykhvatintsy", "displayOrder": 20, "name": "Выхватинцы", "address": "", "settlement": "" },
+    { "id": "voronkovo", "displayOrder": 21, "name": "Воронково", "address": "", "settlement": "" },
+    { "id": "gidirim", "displayOrder": 22, "name": "Гидирим", "address": "", "settlement": "" },
+    { "id": "rybnitsa", "displayOrder": 23, "name": "Рыбница", "address": "", "settlement": "" },
+    { "id": "erzhovo", "displayOrder": 24, "name": "Ержово", "address": "", "settlement": "" },
+    { "id": "saratsei", "displayOrder": 25, "name": "Сарацей", "address": "", "settlement": "" },
+    { "id": "bolshoy-molokish", "displayOrder": 26, "name": "Большой Молокиш", "address": "", "settlement": "" },
+    { "id": "belochi", "displayOrder": 27, "name": "Белочи", "address": "", "settlement": "" },
+    { "id": "stroentsy", "displayOrder": 28, "name": "Строенцы", "address": "", "settlement": "" },
+    { "id": "monastery", "displayOrder": 29, "name": "Монастырь", "address": "", "settlement": "" },
+    { "id": "katerinovka", "displayOrder": 30, "name": "Катериновка", "address": "", "settlement": "" },
+    { "id": "rashkovo", "displayOrder": 31, "name": "Рашково", "address": "", "settlement": "" },
+    { "id": "podoima", "displayOrder": 32, "name": "Подойма", "address": "", "settlement": "" },
+    { "id": "podoimitsa", "displayOrder": 33, "name": "Подоймица", "address": "", "settlement": "" },
+    { "id": "kamenka-as", "displayOrder": 34, "name": "АС Каменка", "address": "ул. Кирова, 157", "settlement": "г. Каменка" },
+    { "id": "dniestr-sanatorium", "displayOrder": 35, "name": "Санаторий «Днестр»", "address": "", "settlement": "г. Каменка" }
+  ]
+}

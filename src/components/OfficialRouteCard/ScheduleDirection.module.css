@@ -13,6 +13,23 @@
   line-height: 1.35;
 }
 
+.fare {
+  margin-bottom: 12px;
+  padding: 10px 11px;
+  border: 1px solid #d8e6dc;
+  border-radius: 9px;
+  color: #30463a;
+  background-color: #ffffff;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.fare p {
+  margin: 4px 0 0;
+  color: #68766e;
+  font-size: 0.74rem;
+}
+
 .travelTimeSection {
   margin-bottom: 14px;
   padding: 12px;
