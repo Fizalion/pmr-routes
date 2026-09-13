@@ -118,11 +118,11 @@
     "schedule": {
       "name": "ОАО «Автостанции Приднестровья»",
       "channel": "официальная Viber-группа",
-      "checkedAt": "2026-09-07"
+      "checkedAt": "2026-09-11"
     }
   },
   "schedule": {
-    "forwardPublishedAt": "2026-08-29",
+    "forwardPublishedAt": "2026-09-11",
     "backwardPublishedAt": "2026-09-07",
     "forwardDepartures": [
       "05:00",
@@ -295,7 +295,7 @@
     {
       "id": "slobodzeya-dkp",
       "displayOrder": 5,
-      "name": "ДКП Слободзея",
+      "name": "бывшая ДКП Слободзея",
       "address": "ул. Ленина, 99",
       "settlement": "г. Слободзея",
       "distanceFromStart": 14.4,

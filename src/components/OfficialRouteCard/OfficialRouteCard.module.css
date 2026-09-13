@@ -167,6 +167,58 @@
   display: none;
 }
 
+.stopsButton {
+  min-height: 38px;
+  margin-top: 14px;
+  padding: 7px 11px;
+  border: 1px solid #a9c5b3;
+  border-radius: 8px;
+  color: #21613d;
+  background-color: #f3f8f5;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.stopsButton:hover {
+  border-color: #79a789;
+  background-color: #e9f3ec;
+}
+
+.stopsButton:focus-visible {
+  outline: 3px solid rgba(40, 118, 74, 0.2);
+  outline-offset: 2px;
+}
+
+.feedbackPrompt {
+  display: grid;
+  gap: 6px;
+  margin-top: 18px;
+  padding: 13px 14px;
+  border: 1px solid #c9ddcf;
+  border-radius: 10px;
+  color: #30463a;
+  background-color: #f3f8f5;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.feedbackPrompt a {
+  color: #2563a9;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.feedbackPrompt a:hover {
+  color: #194f89;
+}
+
+.feedbackPrompt a:focus-visible {
+  outline: 3px solid rgba(37, 99, 169, 0.2);
+  outline-offset: 2px;
+}
+
 .footer {
   display: grid;
   gap: 12px;

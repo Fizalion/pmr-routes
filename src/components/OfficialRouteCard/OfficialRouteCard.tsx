@@ -1,4 +1,6 @@
+import { useState } from "react";
 import type { OfficialRoute } from "../../types/officialRoute";
+import { feedbackUrl } from "../../config/contact";
 import styles from "./OfficialRouteCard.module.css";
 import ScheduleDirection from "./ScheduleDirection";
 
@@ -11,9 +13,12 @@ const OfficialRouteCard = ({
   route,
   showStops = true,
 }: OfficialRouteCardProps) => {
+  const [areStopsExpanded, setAreStopsExpanded] = useState(false);
   const forwardScheduleId = route.id + "-forward-schedule";
   const backwardScheduleId = route.id + "-backward-schedule";
   const stops = route.stops;
+  const hasMoreStops = stops.length > 5;
+  const displayedStops = areStopsExpanded ? stops : stops.slice(0, 5);
   const source = route.source.schedule.name;
   const splitDate = route.source.schedule.checkedAt.split("-");
   const checkedAtLabel = new Date(
@@ -42,6 +47,8 @@ const OfficialRouteCard = ({
             scheduleId={forwardScheduleId}
             status={route.schedule.forwardStatus}
             departurePoint={route.directions.forward.departurePoint}
+            arrivalPoint={route.directions.forward.arrivalPoint}
+            fare={route.directions.forward.fare}
             travelTimePoints={route.directions.forward.travelTimePoints}
             note={route.schedule.forwardNote}
           />
@@ -53,6 +60,8 @@ const OfficialRouteCard = ({
             scheduleId={backwardScheduleId}
             status={route.schedule.backwardStatus}
             departurePoint={route.directions.backward.departurePoint}
+            arrivalPoint={route.directions.backward.arrivalPoint}
+            fare={route.directions.backward.fare}
             travelTimePoints={route.directions.backward.travelTimePoints}
             note={route.schedule.backwardNote}
           />
@@ -63,14 +72,34 @@ const OfficialRouteCard = ({
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Остановки</h2>
           <ul className={styles.stopList}>
-            {stops.map((stop) => (
+            {displayedStops.map((stop) => (
               <li className={styles.stopItem} key={stop.id}>
                 {stop.name}
                 {stop.settlement && ` - ${stop.settlement}`}
               </li>
             ))}
           </ul>
+          {hasMoreStops && (
+            <button
+              className={styles.stopsButton}
+              type="button"
+              onClick={() => setAreStopsExpanded((isExpanded) => !isExpanded)}
+            >
+              {areStopsExpanded
+                ? "Скрыть остановки"
+                : `Показать все остановки (${stops.length})`}
+            </button>
+          )}
         </section>
+      )}
+
+      {route.showFeedbackPrompt && (
+        <aside className={styles.feedbackPrompt}>
+          <strong>Нашли ошибку или информация неактуальна?</strong>
+          <a href={feedbackUrl} target="_blank" rel="noreferrer">
+            Напишите в Telegram-бот
+          </a>
+        </aside>
       )}
 
       <footer className={styles.footer}>

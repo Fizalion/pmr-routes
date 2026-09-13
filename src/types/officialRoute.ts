@@ -4,6 +4,15 @@ export type OfficialRouteDeparturePoint = {
   name: string;
   address?: string;
   mapUrl?: string;
+  phone?: string;
+  phoneLabel?: string;
+};
+
+export type OfficialRouteFare = {
+  amount: number;
+  currency: string;
+  display: string;
+  note?: string;
 };
 
 export type OfficialRouteTravelTimePoint = {
@@ -20,7 +29,9 @@ export type OfficialRouteDirection = {
   from: string;
   to: string;
   departurePoint?: OfficialRouteDeparturePoint;
+  arrivalPoint?: OfficialRouteDeparturePoint;
   travelTimePoints?: OfficialRouteTravelTimePoint[];
+  fare?: OfficialRouteFare;
 };
 
 export type OfficialRouteDirections = {
@@ -49,13 +60,14 @@ export type OfficialRouteStructureSource = {
 
 export type OfficialRouteScheduleSource = {
   name: string;
-  channel: string;
+  channel?: string;
   checkedAt: string;
 };
 
 export type OfficialRouteSources = {
   structure?: OfficialRouteStructureSource;
   schedule: OfficialRouteScheduleSource;
+  fare?: OfficialRouteScheduleSource;
 };
 
 export type OfficialRouteStop = {
@@ -64,9 +76,9 @@ export type OfficialRouteStop = {
   name: string;
   address: string;
   settlement: string;
-  distanceFromStart: number;
-  distanceBetweenPrevious: number;
-  distanceToEnd: number;
+  distanceFromStart?: number;
+  distanceBetweenPrevious?: number;
+  distanceToEnd?: number;
 };
 
 export type OfficialRoute = {
@@ -80,4 +92,5 @@ export type OfficialRoute = {
   stops: OfficialRouteStop[];
   status: RouteStatus;
   slug: string;
+  showFeedbackPrompt?: boolean;
 };
