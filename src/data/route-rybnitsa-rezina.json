@@ -1,0 +1,46 @@
+{
+  "id": "route-rybnitsa-rezina",
+  "status": "active",
+  "slug": "rybnitsa-rezina",
+  "name": "Рыбница — Резина",
+  "category": "международный",
+  "directions": {
+    "forward": {
+      "from": "Рыбница",
+      "to": "Резина",
+      "departurePoint": {
+        "name": "Автостанция Рыбницы",
+        "address": "ул. Вальченко, 12/1",
+        "phone": "0 (555) 4-14-09",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Автостанция+Рыбница+улица+Вальченко+12%2F1"
+      }
+    },
+    "backward": {
+      "from": "Резина",
+      "to": "Рыбница"
+    }
+  },
+  "source": {
+    "schedule": {
+      "name": "Фото расписания от пассажира",
+      "checkedAt": "2026-09-14"
+    }
+  },
+  "schedule": {
+    "forwardStatus": "available",
+    "backwardStatus": "available",
+    "forwardPublishedAt": "2026-09-14",
+    "backwardPublishedAt": "2026-09-14",
+    "forwardServiceDays": "ежедневно",
+    "backwardServiceDays": "ежедневно",
+    "forwardDepartures": [
+      "07:00", "08:12", "09:24", "10:36", "11:48",
+      "13:00", "14:12", "15:24", "16:30", "17:30"
+    ],
+    "backwardDepartures": [
+      "06:24", "07:36", "08:48", "10:00", "11:12",
+      "12:24", "13:36", "14:48", "16:00", "17:00"
+    ]
+  },
+  "stops": []
+}

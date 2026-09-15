@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import DeveloperInfo from "../../components/DeveloperInfo/DeveloperInfo";
 import OfficialRouteCard from "../../components/OfficialRouteCard/OfficialRouteCard";
 import RouteList from "../../components/RouteList/RouteList";
 import { feedbackUrl } from "../../config/contact";
@@ -54,6 +55,7 @@ function CatalogPage() {
     <main className="app">
       <header className="app-header">
         <h1>Маршрутки ПМР</h1>
+        <DeveloperInfo />
       </header>
 
       <aside className="prototype-notice">

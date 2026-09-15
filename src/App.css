@@ -31,6 +31,113 @@
   line-height: 1.4;
 }
 
+.app-header .developer-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 7px;
+  margin-top: 7px;
+  font-size: 0.78rem;
+}
+
+.developer-info button,
+.developer-info a {
+  padding: 0;
+  border: 0;
+  color: #2563a9;
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.developer-info button:hover,
+.developer-info a:hover {
+  color: #194f89;
+}
+
+.developer-info button:focus-visible,
+.developer-info a:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid rgba(37, 99, 169, 0.2);
+  outline-offset: 2px;
+}
+
+.about-dialog {
+  width: min(calc(100% - 32px), 520px);
+  max-height: calc(100vh - 32px);
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #cbd8cf;
+  border-radius: 16px;
+  color: #34463a;
+  background-color: #ffffff;
+  box-shadow: 0 20px 60px rgba(24, 33, 47, 0.22);
+}
+
+.about-dialog::backdrop {
+  background-color: rgba(24, 33, 47, 0.48);
+}
+
+.about-dialog-content {
+  position: relative;
+  padding: 24px 20px 20px;
+}
+
+.about-dialog h2 {
+  margin: 0 36px 14px 0;
+  color: #18251d;
+  font-size: 1.25rem;
+}
+
+.about-dialog p {
+  margin: 0 0 13px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.about-dialog-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #66756c;
+  background-color: #f3f6f4;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.about-dialog-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #a9c5b3;
+  border-radius: 8px;
+  color: #21613d;
+  background-color: #f3f8f5;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.about-dialog-close:hover,
+.about-dialog-link:hover {
+  background-color: #e9f3ec;
+}
+
+.about-dialog-close:focus-visible,
+.about-dialog-link:focus-visible {
+  outline: 3px solid rgba(40, 118, 74, 0.2);
+  outline-offset: 2px;
+}
+
 .prototype-notice {
   width: min(100%, 1040px);
   margin-bottom: 18px;

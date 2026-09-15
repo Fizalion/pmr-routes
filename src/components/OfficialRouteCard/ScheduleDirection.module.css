@@ -140,6 +140,13 @@
   text-align: center;
 }
 
+.pastDepartureTime {
+  border-color: #dfe3e0;
+  color: #7b837e;
+  background-color: #eef1ef;
+  font-weight: 600;
+}
+
 .noDepartures {
   margin: 0;
   color: #39483f;
