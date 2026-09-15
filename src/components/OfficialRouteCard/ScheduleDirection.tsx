@@ -29,13 +29,19 @@ const getDepartureMinutes = (departure: string) => {
   return hours * 60 + minutes;
 };
 
-const getUpcomingDepartures = (
+const getCompactDepartures = (
   departures: string[],
   currentTimeMinutes: number,
-) =>
-  departures
+) => {
+  const pastDepartures = departures
+    .filter((departure) => getDepartureMinutes(departure) < currentTimeMinutes)
+    .slice(-2);
+  const upcomingDepartures = departures
     .filter((departure) => getDepartureMinutes(departure) >= currentTimeMinutes)
-    .slice(0, 5);
+    .slice(0, 2);
+
+  return [...pastDepartures, ...upcomingDepartures];
+};
 
 const ScheduleDirection = ({
   from,
@@ -54,12 +60,15 @@ const ScheduleDirection = ({
   const currentTime = new Date();
   const currentTimeMinutes =
     currentTime.getHours() * 60 + currentTime.getMinutes();
-  const upcomingDepartures = getUpcomingDepartures(
+  const compactDepartures = getCompactDepartures(
     departures,
     currentTimeMinutes,
   );
+  const hasUpcomingDepartures = departures.some(
+    (departure) => getDepartureMinutes(departure) >= currentTimeMinutes,
+  );
 
-  const displayedDepartures = isExpanded ? departures : upcomingDepartures;
+  const displayedDepartures = isExpanded ? departures : compactDepartures;
 
   if (status === "unavailable") {
     return (
@@ -108,21 +117,27 @@ const ScheduleDirection = ({
       )}
 
       <p className={styles.nextDeparturesLabel}>
-        {isExpanded ? "Полное расписание" : "Следующие рейсы"}
+        {isExpanded ? "Полное расписание" : "Ближайшее время по расписанию"}
       </p>
       <div id={scheduleId}>
-        {displayedDepartures.length > 0 ? (
+        {displayedDepartures.length > 0 && (
           <ul className={styles.departureList}>
             {displayedDepartures.map((departure, index) => (
               <li
-                className={styles.departureTime}
+                className={`${styles.departureTime} ${
+                  !isExpanded &&
+                  getDepartureMinutes(departure) < currentTimeMinutes
+                    ? styles.pastDepartureTime
+                    : ""
+                }`}
                 key={scheduleId + "-" + departure + "-" + index}
               >
                 {departure}
               </li>
             ))}
           </ul>
-        ) : (
+        )}
+        {!isExpanded && !hasUpcomingDepartures && (
           <p className={styles.noDepartures}>
             Следующий рейс завтра в {departures[0]}.
           </p>

@@ -5,6 +5,7 @@ import route076Data from "./route-076.json";
 import route077Data from "./route-077.json";
 import route095Data from "./route-095.json";
 import routeRybnitsaChisinauData from "./route-rybnitsa-chisinau.json";
+import routeRybnitsaRezinaData from "./route-rybnitsa-rezina.json";
 
 export const officialRoutes = [
   route073Data,
@@ -13,4 +14,5 @@ export const officialRoutes = [
   route077Data,
   route095Data,
   routeRybnitsaChisinauData,
+  routeRybnitsaRezinaData,
 ] as OfficialRoute[];
