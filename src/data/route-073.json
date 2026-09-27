@@ -28,11 +28,11 @@
     "schedule": {
       "name": "ОАО «Автостанции Приднестровья»",
       "channel": "информационный стенд",
-      "checkedAt": "2026-09-11"
+      "checkedAt": "2026-09-26"
     }
   },
   "schedule": {
-    "forwardPublishedAt": "2026-09-11",
+    "forwardPublishedAt": "2026-09-26",
     "forwardStatus": "available",
     "backwardStatus": "estimated",
     "backwardNote": "По информации пассажира, в 06:30 маршрутка уже находится в Глином. Точное время и место отправления неизвестны.",

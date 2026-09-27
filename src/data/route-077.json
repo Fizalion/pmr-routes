@@ -46,7 +46,7 @@
     },
     "schedule": {
       "name": "ОАО «Автостанции Приднестровья»",
-      "checkedAt": "2026-09-17"
+      "checkedAt": "2026-09-25"
     },
     "fare": {
       "name": "ОАО «Автостанции Приднестровья»",
@@ -56,7 +56,7 @@
   "schedule": {
     "forwardStatus": "available",
     "backwardStatus": "available",
-    "forwardPublishedAt": "2026-09-10",
+    "forwardPublishedAt": "2026-09-25",
     "backwardPublishedAt": "2026-09-17",
     "forwardDepartures": [
       "05:55",
